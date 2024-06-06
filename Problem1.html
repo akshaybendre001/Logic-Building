@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //Find missing numbers in an array
+
+        let array = [1,2,5,7,9,10,12,13,14,15,19,20,21,23,24,26,29,30];
+        
+        function missing()
+        {
+            let emptyarray=[];
+            for(i=0; i<array.length; i++)
+            {
+                let num1 = array[i];
+                let num2 = array[i+1];
+
+                if(num2-num1 > 1)
+                {
+                    for(j = num1 + 1; j< num2; j++)
+                    {
+                       emptyarray.push(j);  //emp1 = emptyarray.push(j);
+                    
+                    }
+                }
+            
+            }
+            return console.log(emptyarray);
+            
+        }
+        missing();
+
+    </script>
+</body>
+</html>
